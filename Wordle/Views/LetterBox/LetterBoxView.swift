@@ -22,13 +22,13 @@ class LetterBoxView: UIView {
         setUpView()
     }
     
-    override init(frame: CGRect) {
+    override init(frame: CGRect) { // When created from code
         super.init(frame: frame)
         
         setUpView()
     }
     
-    required init?(coder: NSCoder) {
+    required init?(coder: NSCoder) { // When created from storyboard/xib
         super.init(coder: coder)
         
         setUpView()
@@ -38,7 +38,7 @@ class LetterBoxView: UIView {
     
     private func setUpView() {
         createXib()
-        createBorder()
+        contentView.setBorder()
         
         updateView(letterBox: letterBox)
     }
@@ -50,11 +50,6 @@ class LetterBoxView: UIView {
         
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-    }
-    
-    private func createBorder() {
-        contentView.layer.borderColor = UIColor.gray.cgColor
-        contentView.layer.borderWidth = 2
     }
     
     // MARK: - View Update
@@ -75,18 +70,27 @@ class LetterBoxView: UIView {
     }
     
     private func updateBackground(status: LetterEvaluation?) {
-        switch status {
+        contentView.backgroundColor = status?.backgroundColor ?? .clear
+    }
+}
+
+extension LetterEvaluation {
+    var backgroundColor: UIColor {
+        switch self {
         case .notExist:
-            contentView.backgroundColor = .gray
+            return .gray
             
         case .wrongPlace:
-            contentView.backgroundColor = .yellow
+            return .yellow
             
         case .matched:
-            contentView.backgroundColor = .green
-            
-        default:
-            contentView.backgroundColor = .clear
+            return .green
         }
+    }
+}
+
+extension Optional where Wrapped == LetterEvaluation {
+    var backgroundColor: UIColor {
+        self?.backgroundColor ?? .clear
     }
 }

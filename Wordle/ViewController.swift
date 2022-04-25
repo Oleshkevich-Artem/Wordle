@@ -8,32 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var letterBoxView: LetterBoxView!
+    @IBOutlet weak var keybordContainer: KeybordView!
     
-    private let letterBox: LetterBox? = LetterBox(letter: "a", status: .notExist)
+    private let keyboardManager = KeyboardManager()
+    
+    private let letterBox: LetterBox? = LetterBox(letter: "a", status: .matched)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        createLetterBoxView()
+ 
+        keybordContainer.updateKeyboardSymbols(keyboardManager.keyboardSymbols)
     }
-
-    private func createLetterBoxView() {
-        let letterBoxView = LetterBoxView()
-        letterBoxView.updateLetterBox(letterBox: letterBox)
-        
-        view.addSubview(letterBoxView)
-        
-        letterBoxView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            letterBoxView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            letterBoxView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            letterBoxView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.3),
-            letterBoxView.widthAnchor.constraint(equalTo: letterBoxView.heightAnchor)
-        ])
-    }
-
 }
+    
+
 

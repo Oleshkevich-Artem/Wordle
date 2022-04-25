@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		049149CC2817477D0091B5E5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049149CB2817477D0091B5E5 /* UIView+Extension.swift */; };
+		049149D0281748560091B5E5 /* KeybordBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049149CF281748560091B5E5 /* KeybordBox.swift */; };
+		049149D2281748710091B5E5 /* KeybordSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049149D1281748710091B5E5 /* KeybordSymbol.swift */; };
+		049149D4281748BF0091B5E5 /* KeybordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049149D3281748BF0091B5E5 /* KeybordManager.swift */; };
+		049149D728174A0E0091B5E5 /* KeybordBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049149D628174A0E0091B5E5 /* KeybordBoxView.swift */; };
+		049149D928174A3C0091B5E5 /* KeybordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049149D828174A3C0091B5E5 /* KeybordView.swift */; };
+		9453EFD32817017A0006BE47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453EFD22817017A0006BE47 /* AppDelegate.swift */; };
+		9453EFD52817017A0006BE47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453EFD42817017A0006BE47 /* SceneDelegate.swift */; };
+		9453EFD72817017A0006BE47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453EFD62817017A0006BE47 /* ViewController.swift */; };
+		9453EFDA2817017A0006BE47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9453EFD82817017A0006BE47 /* Main.storyboard */; };
+		9453EFDC2817017B0006BE47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9453EFDB2817017B0006BE47 /* Assets.xcassets */; };
+		9453EFDF2817017B0006BE47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9453EFDD2817017B0006BE47 /* LaunchScreen.storyboard */; };
+		9453EFE8281703330006BE47 /* LetterBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453EFE7281703330006BE47 /* LetterBox.swift */; };
+		9453EFEB281704B50006BE47 /* LetterEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453EFEA281704B50006BE47 /* LetterEvaluation.swift */; };
+		9453EFF02817064D0006BE47 /* LetterBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453EFEF2817064D0006BE47 /* LetterBoxView.swift */; };
+		9453EFF22817065D0006BE47 /* LetterBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9453EFF12817065D0006BE47 /* LetterBoxView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		049149CB2817477D0091B5E5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		049149CF281748560091B5E5 /* KeybordBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybordBox.swift; sourceTree = "<group>"; };
+		049149D1281748710091B5E5 /* KeybordSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybordSymbol.swift; sourceTree = "<group>"; };
+		049149D3281748BF0091B5E5 /* KeybordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybordManager.swift; sourceTree = "<group>"; };
+		049149D628174A0E0091B5E5 /* KeybordBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybordBoxView.swift; sourceTree = "<group>"; };
+		049149D828174A3C0091B5E5 /* KeybordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybordView.swift; sourceTree = "<group>"; };
+		9453EFCF2817017A0006BE47 /* Wordle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9453EFD22817017A0006BE47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9453EFD42817017A0006BE47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9453EFD62817017A0006BE47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9453EFD92817017A0006BE47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9453EFDB2817017B0006BE47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9453EFDE2817017B0006BE47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9453EFE02817017B0006BE47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9453EFE7281703330006BE47 /* LetterBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterBox.swift; sourceTree = "<group>"; };
+		9453EFEA281704B50006BE47 /* LetterEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterEvaluation.swift; sourceTree = "<group>"; };
+		9453EFEF2817064D0006BE47 /* LetterBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterBoxView.swift; sourceTree = "<group>"; };
+		9453EFF12817065D0006BE47 /* LetterBoxView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LetterBoxView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9453EFCC2817017A0006BE47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		049149CA2817473C0091B5E5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				049149CD281747810091B5E5 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		049149CD281747810091B5E5 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				049149CB2817477D0091B5E5 /* UIView+Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		049149CE2817482D0091B5E5 /* Keybord */ = {
+			isa = PBXGroup;
+			children = (
+				049149CF281748560091B5E5 /* KeybordBox.swift */,
+				049149D1281748710091B5E5 /* KeybordSymbol.swift */,
+				049149D3281748BF0091B5E5 /* KeybordManager.swift */,
+			);
+			path = Keybord;
+			sourceTree = "<group>";
+		};
+		049149D5281749650091B5E5 /* Keybord */ = {
+			isa = PBXGroup;
+			children = (
+				049149D628174A0E0091B5E5 /* KeybordBoxView.swift */,
+				049149D828174A3C0091B5E5 /* KeybordView.swift */,
+			);
+			path = Keybord;
+			sourceTree = "<group>";
+		};
+		9453EFC62817017A0006BE47 = {
+			isa = PBXGroup;
+			children = (
+				9453EFD12817017A0006BE47 /* Wordle */,
+				9453EFD02817017A0006BE47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9453EFD02817017A0006BE47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9453EFCF2817017A0006BE47 /* Wordle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9453EFD12817017A0006BE47 /* Wordle */ = {
+			isa = PBXGroup;
+			children = (
+				049149CA2817473C0091B5E5 /* Extensions */,
+				9453EFE6281703200006BE47 /* Models */,
+				9453EFED281706190006BE47 /* Views */,
+				9453EFD22817017A0006BE47 /* AppDelegate.swift */,
+				9453EFD42817017A0006BE47 /* SceneDelegate.swift */,
+				9453EFD62817017A0006BE47 /* ViewController.swift */,
+				9453EFD82817017A0006BE47 /* Main.storyboard */,
+				9453EFDB2817017B0006BE47 /* Assets.xcassets */,
+				9453EFDD2817017B0006BE47 /* LaunchScreen.storyboard */,
+				9453EFE02817017B0006BE47 /* Info.plist */,
+			);
+			path = Wordle;
+			sourceTree = "<group>";
+		};
+		9453EFE6281703200006BE47 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				049149CE2817482D0091B5E5 /* Keybord */,
+				9453EFE92817033E0006BE47 /* Letter */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9453EFE92817033E0006BE47 /* Letter */ = {
+			isa = PBXGroup;
+			children = (
+				9453EFE7281703330006BE47 /* LetterBox.swift */,
+				9453EFEA281704B50006BE47 /* LetterEvaluation.swift */,
+			);
+			path = Letter;
+			sourceTree = "<group>";
+		};
+		9453EFED281706190006BE47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				049149D5281749650091B5E5 /* Keybord */,
+				9453EFEE281706240006BE47 /* LetterBox */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9453EFEE281706240006BE47 /* LetterBox */ = {
+			isa = PBXGroup;
+			children = (
+				9453EFEF2817064D0006BE47 /* LetterBoxView.swift */,
+				9453EFF12817065D0006BE47 /* LetterBoxView.xib */,
+			);
+			path = LetterBox;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9453EFCE2817017A0006BE47 /* Wordle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9453EFE32817017B0006BE47 /* Build configuration list for PBXNativeTarget "Wordle" */;
+			buildPhases = (
+				9453EFCB2817017A0006BE47 /* Sources */,
+				9453EFCC2817017A0006BE47 /* Frameworks */,
+				9453EFCD2817017A0006BE47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wordle;
+			productName = Wordle;
+			productReference = 9453EFCF2817017A0006BE47 /* Wordle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9453EFC72817017A0006BE47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					9453EFCE2817017A0006BE47 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 9453EFCA2817017A0006BE47 /* Build configuration list for PBXProject "Wordle" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9453EFC62817017A0006BE47;
+			productRefGroup = 9453EFD02817017A0006BE47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9453EFCE2817017A0006BE47 /* Wordle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9453EFCD2817017A0006BE47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9453EFDF2817017B0006BE47 /* LaunchScreen.storyboard in Resources */,
+				9453EFDC2817017B0006BE47 /* Assets.xcassets in Resources */,
+				9453EFF22817065D0006BE47 /* LetterBoxView.xib in Resources */,
+				9453EFDA2817017A0006BE47 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9453EFCB2817017A0006BE47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9453EFD72817017A0006BE47 /* ViewController.swift in Sources */,
+				049149CC2817477D0091B5E5 /* UIView+Extension.swift in Sources */,
+				9453EFD32817017A0006BE47 /* AppDelegate.swift in Sources */,
+				049149D928174A3C0091B5E5 /* KeybordView.swift in Sources */,
+				9453EFF02817064D0006BE47 /* LetterBoxView.swift in Sources */,
+				049149D0281748560091B5E5 /* KeybordBox.swift in Sources */,
+				9453EFD52817017A0006BE47 /* SceneDelegate.swift in Sources */,
+				049149D2281748710091B5E5 /* KeybordSymbol.swift in Sources */,
+				9453EFE8281703330006BE47 /* LetterBox.swift in Sources */,
+				049149D728174A0E0091B5E5 /* KeybordBoxView.swift in Sources */,
+				049149D4281748BF0091B5E5 /* KeybordManager.swift in Sources */,
+				9453EFEB281704B50006BE47 /* LetterEvaluation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9453EFD82817017A0006BE47 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9453EFD92817017A0006BE47 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9453EFDD2817017B0006BE47 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9453EFDE2817017B0006BE47 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9453EFE12817017B0006BE47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9453EFE22817017B0006BE47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9453EFE42817017B0006BE47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T8KVDWFT8V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wordle/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = by.oleshkevich.artem.apps.Wordle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9453EFE52817017B0006BE47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T8KVDWFT8V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wordle/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = by.oleshkevich.artem.apps.Wordle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9453EFCA2817017A0006BE47 /* Build configuration list for PBXProject "Wordle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9453EFE12817017B0006BE47 /* Debug */,
+				9453EFE22817017B0006BE47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9453EFE32817017B0006BE47 /* Build configuration list for PBXNativeTarget "Wordle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9453EFE42817017B0006BE47 /* Debug */,
+				9453EFE52817017B0006BE47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9453EFC72817017A0006BE47 /* Project object */;
+}
