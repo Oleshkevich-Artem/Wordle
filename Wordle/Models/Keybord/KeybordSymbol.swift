@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import UIKit
+
+//Enumeration containing keyboard button options: character, enter, delete.
 
 enum KeyboardSymbol: Equatable {
     case enter

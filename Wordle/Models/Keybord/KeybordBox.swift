@@ -7,6 +7,8 @@
 
 import Foundation
 
+//Structure describing the keyboard key.
+
 struct KeyboardBox {
     let symbol: KeyboardSymbol
     let status: LetterEvaluation?

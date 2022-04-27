@@ -7,6 +7,8 @@
 
 import Foundation
 
+//A structure describing the location of the keys on the keyboard.
+
 struct KeyboardManager {
     let keyboardSymbols: [[KeyboardBox]]
     
@@ -24,7 +26,7 @@ struct KeyboardManager {
                 }
                 
                 if index == letters.count - 1 {
-                    return [KeyboardBox(symbol: .enter)] + symbolsRow + [KeyboardBox(symbol: .delete)]
+                    return [KeyboardBox(symbol: .delete)] + symbolsRow + [KeyboardBox(symbol: .enter)]
                 }
                 
                 return symbolsRow

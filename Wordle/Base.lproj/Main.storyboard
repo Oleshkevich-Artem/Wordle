@@ -16,15 +16,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KJg-Kr-XOz" customClass="KeybordView" customModule="Wordle" customModuleProvider="target">
-                                <rect key="frame" x="10" y="44" width="394" height="808"/>
+                                <rect key="frame" x="10" y="348" width="394" height="200"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KJg-Kr-XOz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RJN-eH-JUN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KJg-Kr-XOz" secondAttribute="bottom" constant="10" id="g4s-YO-azp"/>
-                            <constraint firstItem="KJg-Kr-XOz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kc3-Cn-CmF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KJg-Kr-XOz" secondAttribute="bottom" constant="10" id="eRk-oz-2CR"/>
+                            <constraint firstItem="KJg-Kr-XOz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gGU-73-0aB"/>
+                            <constraint firstItem="KJg-Kr-XOz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="yNe-3n-NLG"/>
                         </constraints>
                     </view>
                     <connections>

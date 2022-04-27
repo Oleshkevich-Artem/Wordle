@@ -8,11 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var letterBox: LetterBoxView!
     @IBOutlet weak var keybordContainer: KeybordView!
     
     private let keyboardManager = KeyboardManager()
     
-    private let letterBox: LetterBox? = LetterBox(letter: "a", status: .matched)
+    private let letter: LetterBox? = LetterBox(letter: "a", status: .matched)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,3 @@ class ViewController: UIViewController {
         keybordContainer.updateKeyboardSymbols(keyboardManager.keyboardSymbols)
     }
 }
-    
-
-

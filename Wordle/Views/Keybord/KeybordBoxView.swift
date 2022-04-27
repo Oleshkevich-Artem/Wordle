@@ -7,7 +7,9 @@
 
 import UIKit
 
-class KeybordBoxView: UIButton {
+//A class describing the view of a keyboard key.
+
+class KeybordBoxView: CustomKeyboardBoxButton {
     private var keyboardBox: KeyboardBox!
     
     init(keyboardBox: KeyboardBox) {
@@ -23,9 +25,7 @@ class KeybordBoxView: UIButton {
         
         setUpView()
     }
-    
-    // MARK: - Initial View Setup
-    
+        
     private func setUpView() {
         updateView(keyboardBox: keyboardBox)
         
@@ -37,7 +37,7 @@ class KeybordBoxView: UIButton {
     }
     
     private func setTitleFont() {
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .bold)
     }
     
     private func setCornerRadius() {
@@ -47,14 +47,12 @@ class KeybordBoxView: UIButton {
     private func addConstrains() {
         self.translatesAutoresizingMaskIntoConstraints = false
 
-        let multiplier = keyboardBox.symbol == .delete || keyboardBox.symbol == .enter ? 0.75 : 0.5
+        let multiplier = keyboardBox.symbol == .delete || keyboardBox.symbol == .enter ? 1.0 : 0.5
 
         NSLayoutConstraint.activate([
             self.widthAnchor.constraint(equalTo: self.heightAnchor, multiplier: multiplier)
         ])
     }
-    
-    // MARK: - Manipulation
     
     private func addButtonTapAction() {
         self.addTarget(self, action: #selector(handleButtonTap), for: .touchUpInside)
@@ -63,8 +61,6 @@ class KeybordBoxView: UIButton {
     @objc private func handleButtonTap() {
         print(keyboardBox.symbol)
     }
-    
-    // MARK: - View Update
     
     func updateKeyboardBox(keyboardBox: KeyboardBox) {
         self.keyboardBox = keyboardBox
@@ -83,7 +79,7 @@ class KeybordBoxView: UIButton {
             updateTitle(with: character.uppercased())
             
         case .delete:
-            updateTitle(with: "<-")
+            updateTitle(with: "←")
             
         case .enter:
             updateTitle(with: "ENTER")

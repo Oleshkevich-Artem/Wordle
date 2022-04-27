@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04829A3228199F0100D68062 /* CustomKeyboardBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04829A3128199F0100D68062 /* CustomKeyboardBoxButton.swift */; };
+		04829A382819A36A00D68062 /* LetterEvaluation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04829A372819A36A00D68062 /* LetterEvaluation+Extension.swift */; };
+		04829A3A2819A38A00D68062 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04829A392819A38A00D68062 /* Optional+Extension.swift */; };
 		049149CC2817477D0091B5E5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049149CB2817477D0091B5E5 /* UIView+Extension.swift */; };
 		049149D0281748560091B5E5 /* KeybordBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049149CF281748560091B5E5 /* KeybordBox.swift */; };
 		049149D2281748710091B5E5 /* KeybordSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049149D1281748710091B5E5 /* KeybordSymbol.swift */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04829A3128199F0100D68062 /* CustomKeyboardBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboardBoxButton.swift; sourceTree = "<group>"; };
+		04829A372819A36A00D68062 /* LetterEvaluation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LetterEvaluation+Extension.swift"; sourceTree = "<group>"; };
+		04829A392819A38A00D68062 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		049149CB2817477D0091B5E5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		049149CF281748560091B5E5 /* KeybordBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybordBox.swift; sourceTree = "<group>"; };
 		049149D1281748710091B5E5 /* KeybordSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybordSymbol.swift; sourceTree = "<group>"; };
@@ -69,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				049149CB2817477D0091B5E5 /* UIView+Extension.swift */,
+				04829A372819A36A00D68062 /* LetterEvaluation+Extension.swift */,
+				04829A392819A38A00D68062 /* Optional+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -86,6 +94,7 @@
 		049149D5281749650091B5E5 /* Keybord */ = {
 			isa = PBXGroup;
 			children = (
+				04829A3128199F0100D68062 /* CustomKeyboardBoxButton.swift */,
 				049149D628174A0E0091B5E5 /* KeybordBoxView.swift */,
 				049149D828174A3C0091B5E5 /* KeybordView.swift */,
 			);
@@ -114,9 +123,9 @@
 				049149CA2817473C0091B5E5 /* Extensions */,
 				9453EFE6281703200006BE47 /* Models */,
 				9453EFED281706190006BE47 /* Views */,
+				9453EFD62817017A0006BE47 /* ViewController.swift */,
 				9453EFD22817017A0006BE47 /* AppDelegate.swift */,
 				9453EFD42817017A0006BE47 /* SceneDelegate.swift */,
-				9453EFD62817017A0006BE47 /* ViewController.swift */,
 				9453EFD82817017A0006BE47 /* Main.storyboard */,
 				9453EFDB2817017B0006BE47 /* Assets.xcassets */,
 				9453EFDD2817017B0006BE47 /* LaunchScreen.storyboard */,
@@ -233,11 +242,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04829A382819A36A00D68062 /* LetterEvaluation+Extension.swift in Sources */,
+				04829A3228199F0100D68062 /* CustomKeyboardBoxButton.swift in Sources */,
 				9453EFD72817017A0006BE47 /* ViewController.swift in Sources */,
 				049149CC2817477D0091B5E5 /* UIView+Extension.swift in Sources */,
 				9453EFD32817017A0006BE47 /* AppDelegate.swift in Sources */,
 				049149D928174A3C0091B5E5 /* KeybordView.swift in Sources */,
 				9453EFF02817064D0006BE47 /* LetterBoxView.swift in Sources */,
+				04829A3A2819A38A00D68062 /* Optional+Extension.swift in Sources */,
 				049149D0281748560091B5E5 /* KeybordBox.swift in Sources */,
 				9453EFD52817017A0006BE47 /* SceneDelegate.swift in Sources */,
 				049149D2281748710091B5E5 /* KeybordSymbol.swift in Sources */,

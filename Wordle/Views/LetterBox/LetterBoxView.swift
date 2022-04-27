@@ -7,6 +7,8 @@
 
 import UIKit
 
+//A class describing a letter cell.
+
 class LetterBoxView: UIView {
     
     @IBOutlet var contentView: UIView!
@@ -33,9 +35,7 @@ class LetterBoxView: UIView {
         
         setUpView()
     }
-    
-    // MARK: - Initial View Setup
-    
+        
     private func setUpView() {
         createXib()
         contentView.setBorder()
@@ -51,9 +51,7 @@ class LetterBoxView: UIView {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
-    
-    // MARK: - View Update
-    
+        
     func updateLetterBox(letterBox: LetterBox?) {
         self.letterBox = letterBox
         
@@ -71,26 +69,5 @@ class LetterBoxView: UIView {
     
     private func updateBackground(status: LetterEvaluation?) {
         contentView.backgroundColor = status?.backgroundColor ?? .clear
-    }
-}
-
-extension LetterEvaluation {
-    var backgroundColor: UIColor {
-        switch self {
-        case .notExist:
-            return .gray
-            
-        case .wrongPlace:
-            return .yellow
-            
-        case .matched:
-            return .green
-        }
-    }
-}
-
-extension Optional where Wrapped == LetterEvaluation {
-    var backgroundColor: UIColor {
-        self?.backgroundColor ?? .clear
     }
 }

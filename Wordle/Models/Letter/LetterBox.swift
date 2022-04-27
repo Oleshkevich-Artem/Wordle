@@ -7,6 +7,8 @@
 
 import Foundation
 
+//The structure describing the letter cell.
+
 struct LetterBox {
     let letter: String
     let status: LetterEvaluation?
