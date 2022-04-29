@@ -15,7 +15,7 @@ class CustomKeyboardBoxButton: UIButton {
             UIView.animate(withDuration: self.isHighlighted ? 0 : 0.4,
                            delay: 0.0,
                            options: [.beginFromCurrentState, .allowUserInteraction],
-                           animations: {self.backgroundColor = color.withAlphaComponent(self.isHighlighted ? 0.3 : 1)})
+                           animations: { self.backgroundColor = color.withAlphaComponent(self.isHighlighted ? 0.3 : 1) })
         }
     }
 }

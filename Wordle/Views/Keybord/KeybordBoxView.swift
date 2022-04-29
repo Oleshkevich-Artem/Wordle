@@ -7,8 +7,6 @@
 
 import UIKit
 
-//A class describing the view of a keyboard key.
-
 class KeybordBoxView: CustomKeyboardBoxButton {
     private var keyboardBox: KeyboardBox!
     
@@ -37,7 +35,7 @@ class KeybordBoxView: CustomKeyboardBoxButton {
     }
     
     private func setTitleFont() {
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
     }
     
     private func setCornerRadius() {
@@ -79,7 +77,7 @@ class KeybordBoxView: CustomKeyboardBoxButton {
             updateTitle(with: character.uppercased())
             
         case .delete:
-            updateTitle(with: "←")
+            updateTitle(with: "⌫")
             
         case .enter:
             updateTitle(with: "ENTER")

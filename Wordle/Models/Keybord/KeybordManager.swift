@@ -7,8 +7,6 @@
 
 import Foundation
 
-//A structure describing the location of the keys on the keyboard.
-
 struct KeyboardManager {
     let keyboardSymbols: [[KeyboardBox]]
     

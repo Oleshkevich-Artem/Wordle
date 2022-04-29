@@ -7,8 +7,6 @@
 
 import UIKit
 
-//A class describing the view of a keyboard.
-
 class KeybordView: UIStackView {
     var keyboardSymbols: [[KeyboardBox]]
     

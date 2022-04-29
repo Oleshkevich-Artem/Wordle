@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KJg-Kr-XOz" customClass="KeybordView" customModule="Wordle" customModuleProvider="target">
-                                <rect key="frame" x="10" y="348" width="394" height="200"/>
+                                <rect key="frame" x="10" y="821" width="394" height="31"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

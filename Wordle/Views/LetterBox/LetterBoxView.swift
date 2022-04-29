@@ -7,8 +7,6 @@
 
 import UIKit
 
-//A class describing a letter cell.
-
 class LetterBoxView: UIView {
     
     @IBOutlet var contentView: UIView!
