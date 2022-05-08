@@ -9,6 +9,7 @@ import UIKit
 
 class KeybordView: UIStackView {
     var keyboardSymbols: [[KeyboardBox]]
+    var delegate: KeyboardButtonDelegate?
     
     init(keyboardSymbols: [[KeyboardBox]]) {
         self.keyboardSymbols = keyboardSymbols
@@ -30,7 +31,7 @@ class KeybordView: UIStackView {
         self.axis = .vertical
         self.alignment = .center
         self.distribution = .fillEqually
-        self.spacing = 5
+        self.spacing = 8
         
         createKeyboard()
     }
@@ -47,6 +48,7 @@ class KeybordView: UIStackView {
             
             for box in row {
                 let keyboardBoxView = KeybordBoxView(keyboardBox: box)
+                keyboardBoxView.delegate = delegate
                 
                 stackView.addArrangedSubview(keyboardBoxView)
             }

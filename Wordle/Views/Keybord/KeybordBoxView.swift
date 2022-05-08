@@ -10,6 +10,8 @@ import UIKit
 class KeybordBoxView: CustomKeyboardBoxButton {
     private var keyboardBox: KeyboardBox!
     
+    var delegate: KeyboardButtonDelegate?
+    
     init(keyboardBox: KeyboardBox) {
         self.keyboardBox = keyboardBox
         
@@ -35,7 +37,7 @@ class KeybordBoxView: CustomKeyboardBoxButton {
     }
     
     private func setTitleFont() {
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
     }
     
     private func setCornerRadius() {
@@ -45,7 +47,7 @@ class KeybordBoxView: CustomKeyboardBoxButton {
     private func addConstrains() {
         self.translatesAutoresizingMaskIntoConstraints = false
 
-        let multiplier = keyboardBox.symbol == .delete || keyboardBox.symbol == .enter ? 1.0 : 0.5
+        let multiplier = keyboardBox.symbol == .delete || keyboardBox.symbol == .enter ? 0.75 : 0.5
 
         NSLayoutConstraint.activate([
             self.widthAnchor.constraint(equalTo: self.heightAnchor, multiplier: multiplier)
@@ -57,7 +59,7 @@ class KeybordBoxView: CustomKeyboardBoxButton {
     }
     
     @objc private func handleButtonTap() {
-        print(keyboardBox.symbol)
+        delegate?.handleButtonTap(keyboardBox.symbol)
     }
     
     func updateKeyboardBox(keyboardBox: KeyboardBox) {

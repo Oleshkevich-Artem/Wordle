@@ -4,36 +4,45 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Wordle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Wordle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KJg-Kr-XOz" customClass="KeybordView" customModule="Wordle" customModuleProvider="target">
-                                <rect key="frame" x="10" y="821" width="394" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="S76-rn-k5e" customClass="GameField" customModule="Wordle" customModuleProvider="target">
+                                <rect key="frame" x="20" y="259" width="374" height="378"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="r44-ON-DRF" customClass="KeybordView" customModule="Wordle" customModuleProvider="target">
+                                <rect key="frame" x="10" y="59" width="394" height="793"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KJg-Kr-XOz" secondAttribute="bottom" constant="10" id="eRk-oz-2CR"/>
-                            <constraint firstItem="KJg-Kr-XOz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gGU-73-0aB"/>
-                            <constraint firstItem="KJg-Kr-XOz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="yNe-3n-NLG"/>
+                            <constraint firstItem="S76-rn-k5e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="8vZ-TM-DsF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r44-ON-DRF" secondAttribute="bottom" constant="10" id="9Zf-l3-5sq"/>
+                            <constraint firstItem="S76-rn-k5e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AMv-ZZ-uNf"/>
+                            <constraint firstItem="r44-ON-DRF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="S76-rn-k5e" secondAttribute="bottom" id="MdM-UB-Muk"/>
+                            <constraint firstItem="S76-rn-k5e" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="U29-Pb-E3e"/>
+                            <constraint firstItem="r44-ON-DRF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="X1J-gJ-o8X"/>
+                            <constraint firstItem="r44-ON-DRF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="lVm-dY-iT8"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="keybordContainer" destination="KJg-Kr-XOz" id="fMQ-7p-U7l"/>
+                        <outlet property="gameFieldView" destination="S76-rn-k5e" id="6Un-RP-ROU"/>
+                        <outlet property="keyboardContainer" destination="r44-ON-DRF" id="6tq-bp-gDi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="68"/>
+            <point key="canvasLocation" x="69.565217391304358" y="67.633928571428569"/>
         </scene>
     </scenes>
 </document>

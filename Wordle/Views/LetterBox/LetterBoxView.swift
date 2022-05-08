@@ -10,7 +10,7 @@ import UIKit
 class LetterBoxView: UIView {
     
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var letterLabel: UILabel!
+    @IBOutlet var letterLabel: UILabel!
     
     private var letterBox: LetterBox?
     
@@ -22,13 +22,13 @@ class LetterBoxView: UIView {
         setUpView()
     }
     
-    override init(frame: CGRect) { // When created from code
+    override init(frame: CGRect) {
         super.init(frame: frame)
         
         setUpView()
     }
     
-    required init?(coder: NSCoder) { // When created from storyboard/xib
+    required init?(coder: NSCoder) {
         super.init(coder: coder)
         
         setUpView()
@@ -56,7 +56,7 @@ class LetterBoxView: UIView {
         updateView(letterBox: letterBox)
     }
     
-    private func updateView(letterBox: LetterBox?) {
+    func updateView(letterBox: LetterBox?) {
         updateLabel(letter: letterBox?.letter)
         updateBackground(status: letterBox?.status)
     }

@@ -24,7 +24,7 @@ struct KeyboardManager {
                 }
                 
                 if index == letters.count - 1 {
-                    return [KeyboardBox(symbol: .delete)] + symbolsRow + [KeyboardBox(symbol: .enter)]
+                    return [KeyboardBox(symbol: .enter)] + symbolsRow + [KeyboardBox(symbol: .delete)]
                 }
                 
                 return symbolsRow
