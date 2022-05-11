@@ -67,5 +67,6 @@ class LetterBoxView: UIView {
     
     private func updateBackground(status: LetterEvaluation?) {
         contentView.backgroundColor = status?.backgroundColor ?? .clear
+        contentView.setBorder(color: status?.backgroundColor ?? .gray)
     }
 }

@@ -68,7 +68,7 @@ class KeybordBoxView: CustomKeyboardBoxButton {
         updateView(keyboardBox: keyboardBox)
     }
     
-    private func updateView(keyboardBox: KeyboardBox) {
+    func updateView(keyboardBox: KeyboardBox) {
         updateLabel(symbol: keyboardBox.symbol)
         updateBackground(status: keyboardBox.status)
     }
@@ -79,7 +79,7 @@ class KeybordBoxView: CustomKeyboardBoxButton {
             updateTitle(with: character.uppercased())
             
         case .delete:
-            updateTitle(with: "⌫")
+            self.setImageWithColor(image: UIImage(systemName: "delete.backward"), color: .white)
             
         case .enter:
             updateTitle(with: "ENTER")
@@ -91,6 +91,6 @@ class KeybordBoxView: CustomKeyboardBoxButton {
     }
     
     private func updateBackground(status: LetterEvaluation?) {
-        self.backgroundColor = status?.backgroundColor ?? .gray
+        self.backgroundColor = status?.backgroundColor ?? .lightGray
     }
 }

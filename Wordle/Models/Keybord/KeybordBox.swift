@@ -8,8 +8,8 @@
 import Foundation
 
 struct KeyboardBox {
-    let symbol: KeyboardSymbol
-    let status: LetterEvaluation?
+    var symbol: KeyboardSymbol
+    var status: LetterEvaluation?
     
     init(symbol: KeyboardSymbol,
          status: LetterEvaluation? = nil) {

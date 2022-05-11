@@ -14,19 +14,18 @@ struct GameManager {
     private var lettersNumber: Int
     private var attemtsNumber: Int
     
-    var gameField: [[LetterBox?]]
-    
     private let resultWord: String
     
-    init(lettersNumber: Int = 5, attemptsNumber: Int = 6) {
+    var gameField: [[LetterBox?]]
+    
+    init(resultWord: String = "swift", attemptsNumber: Int = 5) {
+        self.attemtsNumber = attemptsNumber
+        self.resultWord = resultWord
+        self.lettersNumber = self.resultWord.count
+        
         let row: [LetterBox?] = Array(repeating: nil, count: lettersNumber)
         
         self.gameField = Array(repeating: row, count: attemptsNumber)
-        
-        self.lettersNumber = lettersNumber
-        self.attemtsNumber = attemptsNumber
-        
-        self.resultWord = "world"
     }
     
     mutating func handleKeyboardSymbolEnter(_ symbol: KeyboardSymbol) {
@@ -125,4 +124,3 @@ struct GameManager {
         print("Lose")
     }
 }
-   

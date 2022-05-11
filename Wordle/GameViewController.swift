@@ -12,7 +12,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var keyboardContainer: KeybordView!
     
     private var gameManager = GameManager()
-    private let keyboardManager = KeyboardManager()
+    private var keyboardManager = KeyboardManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,8 @@ class GameViewController: UIViewController {
 extension GameViewController: KeyboardButtonDelegate {    
     func handleButtonTap(_ symbol: KeyboardSymbol) {
         gameManager.handleKeyboardSymbolEnter(symbol)
+        keyboardManager.handleButtonTap(symbol)
         gameFieldView.updateGameField(gameManager.gameField)
+        keyboardContainer.updateKeyboardSymbols(keyboardManager.keyboardSymbols)
     }
 }
