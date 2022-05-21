@@ -6,26 +6,31 @@
 //
 
 import Foundation
+import UIKit
 
 struct GameManager {
     private var currentLetterIndexInRow: Int = 0
     private var currentAttemptIndex: Int = 0
     
     private var lettersNumber: Int
-    private var attemtsNumber: Int
+    private var attemptsNumber: Int
     
-    private let resultWord: String
+    private var resultWord: String!
     
     var gameField: [[LetterBox?]]
+    var delegate: GameDelegate?
     
-    init(resultWord: String = "swift", attemptsNumber: Int = 5) {
-        self.attemtsNumber = attemptsNumber
-        self.resultWord = resultWord
-        self.lettersNumber = self.resultWord.count
+    var keyboardManager = KeyboardManager()
+    
+    init(attemptsNumber: Int = 6, lettersNumber: Int = 5) {
+        self.attemptsNumber = attemptsNumber
+        self.lettersNumber = lettersNumber
         
         let row: [LetterBox?] = Array(repeating: nil, count: lettersNumber)
         
         self.gameField = Array(repeating: row, count: attemptsNumber)
+        
+        self.resultWord = getRandomWordFromTxtFile()
     }
     
     mutating func handleKeyboardSymbolEnter(_ symbol: KeyboardSymbol) {
@@ -40,7 +45,7 @@ struct GameManager {
     }
     
     private mutating func checkWord() {
-        if currentLetterIndexInRow < lettersNumber || currentAttemptIndex >= attemtsNumber {
+        if currentLetterIndexInRow < lettersNumber || currentAttemptIndex >= attemptsNumber {
             return
         }
         
@@ -53,17 +58,38 @@ struct GameManager {
         for (index, letter) in currentWord.enumerated() {
             if letter == resultWordArray[index] {
                 gameField[currentAttemptIndex][index]?.status = .matched
+                for (rowIndex, keyboardBoxRow) in keyboardManager.keyboardSymbols.enumerated() {
+                    for (boxIndex, keyboardBox) in keyboardBoxRow.enumerated() {
+                        if keyboardManager.keyboardSymbols[rowIndex][boxIndex].symbol == .character(String(letter)) {
+                            keyboardManager.keyboardSymbols[rowIndex][boxIndex].status = .matched
+                        }
+                    }
+                }
                 
                 continue
             }
             
             if resultWord.contains(letter) {
                 gameField[currentAttemptIndex][index]?.status = .wrongPlace
-                
+                for (rowIndex, keyboardBoxRow) in keyboardManager.keyboardSymbols.enumerated() {
+                    for (boxIndex, keyboardBox) in keyboardBoxRow.enumerated() {
+                        if keyboardManager.keyboardSymbols[rowIndex][boxIndex].symbol == .character(String(letter)) {
+                            keyboardManager.keyboardSymbols[rowIndex][boxIndex].status = .wrongPlace
+                        }
+                    }
+                }
                 continue
             }
             
             gameField[currentAttemptIndex][index]?.status = .notExist
+            keyboardManager.keyboardSymbols[0][0].status = .notExist
+            for (rowIndex, keyboardBoxRow) in keyboardManager.keyboardSymbols.enumerated() {
+                for (boxIndex, keyboardBox) in keyboardBoxRow.enumerated() {
+                    if keyboardManager.keyboardSymbols[rowIndex][boxIndex].symbol == .character(String(letter)) {
+                        keyboardManager.keyboardSymbols[rowIndex][boxIndex].status = .notExist
+                    }
+                }
+            }
         }
         
         if currentWord == resultWord {
@@ -75,7 +101,7 @@ struct GameManager {
         currentAttemptIndex += 1
         currentLetterIndexInRow = 0
         
-        if currentAttemptIndex == attemtsNumber {
+        if currentAttemptIndex == attemptsNumber {
             handleLose()
         }
     }
@@ -116,11 +142,28 @@ struct GameManager {
         currentLetterIndexInRow += 1
     }
     
-    private func handleWin() {
-        print("Win")
+    mutating func handleWin() {
+        delegate?.handleWin()
     }
     
-    private func handleLose() {
-        print("Lose")
+    mutating func handleLose() {
+        delegate?.handleLose()
+    }
+    
+    mutating func restart() {
+        let row: [LetterBox?] = Array(repeating: nil, count: lettersNumber)
+        
+        self.gameField = Array(repeating: row,
+                               count: attemptsNumber)
+        
+        self.resultWord = getRandomWordFromTxtFile()
+    }
+    
+    private func getRandomWordFromTxtFile() -> String {
+        guard let path = Bundle.main.path(forResource: "AllowedWords", ofType: "txt"),
+              let allowedWordsArray = try? String(contentsOfFile: path, encoding: String.Encoding.utf8).split(separator: "\n") else { return "wordle"}
+        let allowedWords = Set(allowedWordsArray)
+        let randomWord = allowedWords.randomElement()
+        return String(randomWord ?? "wordle")
     }
 }
