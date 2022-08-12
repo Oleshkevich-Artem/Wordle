@@ -7,11 +7,9 @@
 
 import UIKit
 
-class SettingsBoardViewController: UIViewController {
+class SettingsboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationBar.tintColor = .white
     }
 }

@@ -11,4 +11,3 @@ protocol GameDelegate {
     func handleWin()
     func handleLose()
 }
-

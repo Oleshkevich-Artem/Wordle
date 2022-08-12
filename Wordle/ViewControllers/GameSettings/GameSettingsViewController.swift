@@ -16,55 +16,45 @@ class GameSettingsViewController: UIViewController {
     @IBOutlet weak var plusAttemptButton: UIButton!
     @IBOutlet weak var minusAttemptButton: UIButton!
     
+    private var attemptsNumber: Int = 6
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.tintColor = .white
         attemptsNumberLabel.layer.cornerRadius = attemptsNumberLabel.frame.height / 2
         attemptsNumberLabel.clipsToBounds = true
-        attemptsNumberLabel.text = "6"
+        attemptsNumberLabel.text = String(attemptsNumber)
         
         plusAttemptButton.layer.cornerRadius = plusAttemptButton.frame.height / 2
         minusAttemptButton.layer.cornerRadius = minusAttemptButton.frame.height / 2
+        playButton.layer.cornerRadius = 40
     }
    
     @IBAction func playAction(_ sender: Any) {
         guard let gameViewController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else { return }
         
-        if let attemptsNumberText = attemptsNumberLabel.text {
-            if let intAttempts = Int(attemptsNumberText) {
-                gameViewController.gameManager = GameManager(attemptsNumber: intAttempts)
-            }
-        }
+        gameViewController.gameManager = GameManager(attemptsNumber: attemptsNumber)
         
         gameViewController.modalTransitionStyle = .crossDissolve
         gameViewController.modalPresentationStyle = .fullScreen
         
-        self.navigationController?.present(gameViewController, animated: true)
+        self.navigationController?.pushViewController(gameViewController, animated: true)
     }
     
     @IBAction func minusOneAtteptAction(_ sender: Any) {
-        if let attemptsNumberText = attemptsNumberLabel.text {
-            if var intAttempts = Int(attemptsNumberText) {
-                if intAttempts == 3 { return }
-                else {
-                    intAttempts -= 1
-                    attemptsNumberLabel.text = String(intAttempts)
-                }
-            }
+        if attemptsNumber == 3 {
+            return
         }
+        attemptsNumber -= 1
+        attemptsNumberLabel.text = String(attemptsNumber)
     }
     
     @IBAction func plusOneAttemptAction(_ sender: Any) {
-        if var attemptsNumberText = attemptsNumberLabel.text {
-            if var intAttempts = Int(attemptsNumberText) {
-                if intAttempts == 8 { return }
-                else {
-                    intAttempts += 1
-                    attemptsNumberLabel.text = String(intAttempts)
-                }
-            }
+        if attemptsNumber == 7 {
+            return
         }
+        attemptsNumber += 1
+        attemptsNumberLabel.text = String(attemptsNumber)
     }
 }

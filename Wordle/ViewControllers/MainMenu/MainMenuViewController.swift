@@ -15,14 +15,15 @@ class MainMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = .white
         
         let frames = [settingsButton, leadersButton, playButton]
         for frame in frames {
-            frame?.layer.cornerRadius = 30
+            frame?.layer.cornerRadius = 40
         }
     }
     
-    @IBAction func gameModeBoard(_ sender: Any) {
+    @IBAction func gameSettings(_ sender: Any) {
         guard let gameSettingsViewController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "GameSettingsViewController") as? GameSettingsViewController else { return }
         
@@ -33,18 +34,18 @@ class MainMenuViewController: UIViewController {
     }
     
     @IBAction func leadersBoard(_ sender: Any) {
-        guard let leadersBoardViewController = UIStoryboard(name: "Main", bundle: nil)
-                .instantiateViewController(withIdentifier: "LeadersBoardViewController") as? LeadersBoardViewController else { return }
+        guard let leadersboardViewController = UIStoryboard(name: "Main", bundle: nil)
+                .instantiateViewController(withIdentifier: "LeadersboardViewController") as? LeadersboardViewController else { return }
         
-        leadersBoardViewController.modalTransitionStyle = .crossDissolve
-        leadersBoardViewController.modalPresentationStyle = .fullScreen
+        leadersboardViewController.modalTransitionStyle = .crossDissolve
+        leadersboardViewController.modalPresentationStyle = .fullScreen
         
-        self.navigationController?.pushViewController(leadersBoardViewController, animated: true)
+        self.navigationController?.pushViewController(leadersboardViewController, animated: true)
     }
     
     @IBAction func settingsBoard(_ sender: Any) {
         guard let settingsBoardViewController = UIStoryboard(name: "Main", bundle: nil)
-                .instantiateViewController(withIdentifier: "SettingsBoardViewController") as? SettingsBoardViewController else { return }
+                .instantiateViewController(withIdentifier: "SettingsboardViewController") as? SettingsboardViewController else { return }
         
         settingsBoardViewController.modalTransitionStyle = .crossDissolve
         settingsBoardViewController.modalPresentationStyle = .fullScreen

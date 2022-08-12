@@ -55,7 +55,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="gameModeBoard:" destination="SXO-ky-0AX" eventType="touchUpInside" id="Wgy-kr-5G5"/>
+                                                    <action selector="gameSettings:" destination="SXO-ky-0AX" eventType="touchUpInside" id="tM2-9j-6Dn"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVk-h5-IE6">
@@ -113,15 +113,15 @@
             </objects>
             <point key="canvasLocation" x="-2020" y="68"/>
         </scene>
-        <!--Leaders Board View Controller-->
+        <!--Leadersboard View Controller-->
         <scene sceneID="R92-9C-w2w">
             <objects>
-                <viewController storyboardIdentifier="LeadersBoardViewController" id="0aN-ta-zaQ" customClass="LeadersBoardViewController" customModule="Wordle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeadersboardViewController" id="0aN-ta-zaQ" customClass="LeadersboardViewController" customModule="Wordle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lzb-IE-y0a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="NUc-da-lQI">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="NUc-da-lQI">
                                 <rect key="frame" x="40" y="64" width="334" height="778"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEADERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKT-h2-XtN">
@@ -130,10 +130,19 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="9sy-Ub-I0x">
-                                        <rect key="frame" x="0.0" y="165" width="334" height="613"/>
-                                    </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wuS-zy-wcl">
+                                        <rect key="frame" x="0.0" y="75" width="334" height="703"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="wuS-zy-wcl" firstAttribute="centerY" secondItem="NUc-da-lQI" secondAttribute="centerY" id="A8T-Z6-Rox"/>
+                                    <constraint firstItem="wuS-zy-wcl" firstAttribute="leading" secondItem="NUc-da-lQI" secondAttribute="leading" constant="10" id="IlS-Nd-rMR"/>
+                                    <constraint firstItem="wuS-zy-wcl" firstAttribute="centerX" secondItem="NUc-da-lQI" secondAttribute="centerX" id="P4l-RQ-bYh"/>
+                                    <constraint firstItem="wuS-zy-wcl" firstAttribute="top" secondItem="aKT-h2-XtN" secondAttribute="bottom" constant="10" id="ryb-vV-f3H"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BaM-qR-LOJ"/>
@@ -145,15 +154,18 @@
                             <constraint firstItem="BaM-qR-LOJ" firstAttribute="bottom" secondItem="NUc-da-lQI" secondAttribute="bottom" constant="20" id="mgn-e7-kum"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="leaderboardTableView" destination="wuS-zy-wcl" id="yNU-r1-LIi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmL-So-F51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1001" y="301"/>
         </scene>
-        <!--Settings Board View Controller-->
+        <!--Settingsboard View Controller-->
         <scene sceneID="nNt-3H-96r">
             <objects>
-                <viewController storyboardIdentifier="SettingsBoardViewController" id="Oud-Y3-F2H" customClass="SettingsBoardViewController" customModule="Wordle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsBoardViewController" id="Oud-Y3-F2H" customClass="SettingsboardViewController" customModule="Wordle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NXT-GB-IHZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,6 +341,9 @@
     <resources>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
