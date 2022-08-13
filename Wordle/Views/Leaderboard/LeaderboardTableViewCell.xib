@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,28 +20,29 @@
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="4dj-e3-nEy">
                         <rect key="frame" x="5" y="0.0" width="310" height="44"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brb-fo-gCF">
-                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brb-fo-gCF">
+                                <rect key="frame" x="0.0" y="0.0" width="56" height="44"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoR-Ax-MQM">
-                                <rect key="frame" x="268.5" y="0.0" width="41.5" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoR-Ax-MQM">
+                                <rect key="frame" x="254.5" y="0.0" width="55.5" height="44"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" systemColor="systemGreenColor"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="4dj-e3-nEy" secondAttribute="bottom" id="Jsd-4r-IdA"/>
-                    <constraint firstItem="4dj-e3-nEy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Ub1-Z4-0Wi"/>
-                    <constraint firstItem="4dj-e3-nEy" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="V1Z-1Y-Kaw"/>
-                    <constraint firstItem="4dj-e3-nEy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="VwZ-aA-jg8"/>
-                    <constraint firstAttribute="trailing" secondItem="4dj-e3-nEy" secondAttribute="trailing" constant="5" id="W8o-5U-vBA"/>
-                    <constraint firstItem="4dj-e3-nEy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aUA-et-U67"/>
+                    <constraint firstItem="4dj-e3-nEy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1TX-0e-zsq"/>
+                    <constraint firstAttribute="bottom" secondItem="4dj-e3-nEy" secondAttribute="bottom" id="6It-6O-jjN"/>
+                    <constraint firstItem="4dj-e3-nEy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Kcu-nB-Xbj"/>
+                    <constraint firstItem="4dj-e3-nEy" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="SUb-wo-IhY"/>
+                    <constraint firstAttribute="trailing" secondItem="4dj-e3-nEy" secondAttribute="trailing" constant="5" id="cBU-ge-TrW"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -51,4 +53,9 @@
             <point key="canvasLocation" x="132" y="54"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

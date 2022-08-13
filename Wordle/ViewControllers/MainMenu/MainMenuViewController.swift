@@ -9,7 +9,6 @@ import UIKit
 
 class MainMenuViewController: UIViewController {
 
-    @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var leadersButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     
@@ -17,7 +16,7 @@ class MainMenuViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.tintColor = .white
         
-        let frames = [settingsButton, leadersButton, playButton]
+        let frames = [leadersButton, playButton]
         for frame in frames {
             frame?.layer.cornerRadius = 40
         }
@@ -41,15 +40,5 @@ class MainMenuViewController: UIViewController {
         leadersboardViewController.modalPresentationStyle = .fullScreen
         
         self.navigationController?.pushViewController(leadersboardViewController, animated: true)
-    }
-    
-    @IBAction func settingsBoard(_ sender: Any) {
-        guard let settingsBoardViewController = UIStoryboard(name: "Main", bundle: nil)
-                .instantiateViewController(withIdentifier: "SettingsboardViewController") as? SettingsboardViewController else { return }
-        
-        settingsBoardViewController.modalTransitionStyle = .crossDissolve
-        settingsBoardViewController.modalPresentationStyle = .fullScreen
-        
-        self.navigationController?.pushViewController(settingsBoardViewController, animated: true)
     }
 }

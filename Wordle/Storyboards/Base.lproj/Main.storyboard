@@ -38,16 +38,16 @@
                                 <rect key="frame" x="40" y="108" width="334" height="768"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORDLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GS6-0u-Ex5">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="86"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="108"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="vgg-cn-8OP">
-                                        <rect key="frame" x="0.0" y="186" width="334" height="582"/>
+                                        <rect key="frame" x="0.0" y="208" width="334" height="560"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjX-J0-43m">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="108"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="153"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Play">
@@ -59,7 +59,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVk-h5-IE6">
-                                                <rect key="frame" x="0.0" y="158" width="334" height="108"/>
+                                                <rect key="frame" x="0.0" y="203" width="334" height="153.5"/>
                                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Leaders">
@@ -70,20 +70,8 @@
                                                     <action selector="leadersBoard:" destination="SXO-ky-0AX" eventType="touchUpInside" id="ODq-8n-xH3"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RX6-ks-zux">
-                                                <rect key="frame" x="0.0" y="316" width="334" height="108"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Settings">
-                                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="settingsBoard:" destination="SXO-ky-0AX" eventType="touchUpInside" id="2jd-WG-3eT"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Artem Oleshevich" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6y-2m-djW">
-                                                <rect key="frame" x="0.0" y="474" width="334" height="108"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created  and derected by Artem Oleshevich" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6y-2m-djW">
+                                                <rect key="frame" x="0.0" y="406.5" width="334" height="153.5"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -106,7 +94,6 @@
                     <connections>
                         <outlet property="leadersButton" destination="JVk-h5-IE6" id="Uah-3z-0ww"/>
                         <outlet property="playButton" destination="AjX-J0-43m" id="4y8-Cw-f8r"/>
-                        <outlet property="settingsButton" destination="RX6-ks-zux" id="GlY-Pa-AFM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6T-Px-KMi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -121,37 +108,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="NUc-da-lQI">
-                                <rect key="frame" x="40" y="64" width="334" height="778"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NUc-da-lQI">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEADERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKT-h2-XtN">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="65"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wuS-zy-wcl">
-                                        <rect key="frame" x="0.0" y="75" width="334" height="703"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="65" width="414" height="703"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="wuS-zy-wcl" firstAttribute="centerY" secondItem="NUc-da-lQI" secondAttribute="centerY" id="A8T-Z6-Rox"/>
-                                    <constraint firstItem="wuS-zy-wcl" firstAttribute="leading" secondItem="NUc-da-lQI" secondAttribute="leading" constant="10" id="IlS-Nd-rMR"/>
-                                    <constraint firstItem="wuS-zy-wcl" firstAttribute="centerX" secondItem="NUc-da-lQI" secondAttribute="centerX" id="P4l-RQ-bYh"/>
-                                    <constraint firstItem="wuS-zy-wcl" firstAttribute="top" secondItem="aKT-h2-XtN" secondAttribute="bottom" constant="10" id="ryb-vV-f3H"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BaM-qR-LOJ"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BaM-qR-LOJ" firstAttribute="trailing" secondItem="NUc-da-lQI" secondAttribute="trailing" constant="40" id="5sL-Vd-gy6"/>
-                            <constraint firstItem="NUc-da-lQI" firstAttribute="top" secondItem="BaM-qR-LOJ" secondAttribute="top" constant="20" id="Ha5-9X-1pX"/>
-                            <constraint firstItem="NUc-da-lQI" firstAttribute="leading" secondItem="BaM-qR-LOJ" secondAttribute="leading" constant="40" id="P5r-CR-qHK"/>
-                            <constraint firstItem="BaM-qR-LOJ" firstAttribute="bottom" secondItem="NUc-da-lQI" secondAttribute="bottom" constant="20" id="mgn-e7-kum"/>
+                            <constraint firstItem="NUc-da-lQI" firstAttribute="top" secondItem="BaM-qR-LOJ" secondAttribute="top" constant="50" id="Bif-DL-EFV"/>
+                            <constraint firstItem="NUc-da-lQI" firstAttribute="leading" secondItem="BaM-qR-LOJ" secondAttribute="leading" id="M7F-Rn-ANn"/>
+                            <constraint firstItem="NUc-da-lQI" firstAttribute="bottom" secondItem="BaM-qR-LOJ" secondAttribute="bottom" id="oia-CN-XId"/>
+                            <constraint firstItem="NUc-da-lQI" firstAttribute="trailing" secondItem="BaM-qR-LOJ" secondAttribute="trailing" id="zJa-v5-Y9B"/>
                         </constraints>
                     </view>
                     <connections>
@@ -160,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmL-So-F51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1001" y="301"/>
+            <point key="canvasLocation" x="-1001.4492753623189" y="300.66964285714283"/>
         </scene>
         <!--Settingsboard View Controller-->
         <scene sceneID="nNt-3H-96r">
@@ -219,7 +201,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="re8-nA-hYQ">
                                         <rect key="frame" x="0.0" y="384" width="334" height="394"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please!                            Select the number of attempts:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtv-Lh-u5R">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the number of attempts!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtv-Lh-u5R">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="98"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -341,9 +323,6 @@
     <resources>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

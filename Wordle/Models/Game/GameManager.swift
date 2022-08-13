@@ -15,7 +15,11 @@ struct GameManager {
     private var lettersNumber: Int
     private var attemptsNumber: Int
     
-    private var resultWord: String!
+    private var resultWord: String! {
+        didSet {
+            print(resultWord)
+        }
+    }
     
     var gameField: [[LetterBox?]]
     var delegate: GameDelegate?
