@@ -8,9 +8,10 @@
 import Foundation
 
 struct KeyboardManager {
-    let keyboardSymbols: [[KeyboardBox]]
+    var keyboardSymbols: [[KeyboardBox]]
     
     init() {
+        
         let letters = [
             ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
             ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
@@ -24,7 +25,7 @@ struct KeyboardManager {
                 }
                 
                 if index == letters.count - 1 {
-                    return [KeyboardBox(symbol: .delete)] + symbolsRow + [KeyboardBox(symbol: .enter)]
+                    return [KeyboardBox(symbol: .enter)] + symbolsRow + [KeyboardBox(symbol: .delete)]
                 }
                 
                 return symbolsRow

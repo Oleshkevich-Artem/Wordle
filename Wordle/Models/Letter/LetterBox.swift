@@ -8,6 +8,6 @@
 import Foundation
 
 struct LetterBox {
-    let letter: String
-    let status: LetterEvaluation?
+    var letter: String
+    var status: LetterEvaluation?
 }

@@ -12,7 +12,7 @@ extension LetterEvaluation {
     var backgroundColor: UIColor {
         switch self {
         case .notExist:
-            return .gray
+            return .darkGray
             
         case .wrongPlace:
             return .orange
