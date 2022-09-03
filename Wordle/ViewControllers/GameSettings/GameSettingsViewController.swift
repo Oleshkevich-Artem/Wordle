@@ -8,8 +8,6 @@
 import UIKit
 
 class GameSettingsViewController: UIViewController {
-
-    
     @IBOutlet weak var playButton: UIButton!
 
     @IBOutlet weak var attemptsNumberLabel: UILabel!

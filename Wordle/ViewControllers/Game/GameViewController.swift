@@ -30,7 +30,7 @@ extension GameViewController: KeyboardButtonDelegate {
         gameManager.handleKeyboardSymbolEnter(symbol)
         gameFieldView.updateGameField(gameManager.gameField)
         keyboardContainer.updateKeyboardSymbols(gameManager.keyboardManager.keyboardSymbols)
-        }
+    }
 }
 
 extension GameViewController: GameDelegate {
@@ -77,17 +77,26 @@ extension GameViewController: GameDelegate {
         
         let changeSettingsAction = UIAlertAction(title: "Change settings",
                                           style: .default) { _ in
+            
+            let userName = alertController.textFields?.first?.text ?? "Player"
+            self.handleRestartGameAfterWin(userName: userName)
+            
             self.navigationController?.popViewController(animated: true)
+            
         }
         
         let goBackToMenuAction = UIAlertAction(title: "Main menu",
                                                style: .destructive) { _ in
+            
+            let userName = alertController.textFields?.first?.text ?? "Player"
+            self.handleRestartGameAfterWin(userName: userName)
+            
             self.navigationController?.popToRootViewController(animated: true)
         }
         
         let restartAction = UIAlertAction(title: "Restart",
                                                style: .cancel) {_ in
-            let userName = alertController.textFields?.first?.text ?? "username"
+            let userName = alertController.textFields?.first?.text ?? "Player"
             
             self.handleRestartGameAfterWin(userName: userName)
         }

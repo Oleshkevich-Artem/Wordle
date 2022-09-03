@@ -10,5 +10,4 @@ import Foundation
 struct GameResult: Codable {
     let userName: String
     let attemptsNumber: Int
-    let time: Int
 }

@@ -8,10 +8,8 @@
 import UIKit
 
 class LeaderboardTableViewCell: UITableViewCell {
-    
     static let id = "LeaderboardTableViewCell"
     
-
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     

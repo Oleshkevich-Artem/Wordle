@@ -162,15 +162,21 @@ struct GameManager {
         return randomWord
     }
     
-    func saveData(userName: String) {
-        let gameResult = GameResult(userName: userName,
-                                    attemptsNumber: currentAttemptIndex,
-                                    time: 568)
-        
-        UserDefaultsService.shared.saveGameResult(gameResult)
-        
-        let gameResults = UserDefaultsService.shared.getGameResults()
-        print(gameResults)
+    func saveData(userName: String?) {
+        if let userName = userName {
+            if userName.count > 0 && !userName.contains(" ") {
+                let gameResult = GameResult(userName: userName,
+                                            attemptsNumber: currentAttemptIndex)
+                
+                UserDefaultsService.shared.saveGameResult(gameResult)
+            }
+            else {
+                let gameResult = GameResult(userName: "Player",
+                                            attemptsNumber: currentAttemptIndex)
+                
+                UserDefaultsService.shared.saveGameResult(gameResult)
+            }
+        }
     }
     
     mutating func restart() {
